@@ -1,4 +1,6 @@
-# revolver
+========
+revolver
+========
 
 Revolver is a simple utility that uses ansible to distribute Fernet keys to
 remote Keystone servers. When deploying multiple Keystone servers with Fernet
@@ -21,11 +23,14 @@ For example, if you have three Keystone servers in your deployment:
 - keystonegamma.example.com
 
 You could run revolver from keystonealpha.example.com to push it's key
-repository to the other Keystone nodes with the following inventory file:
+repository to the other Keystone nodes with the following contents in an
+inventory file:
 
-  $ cat inventory
   keystonebeta.example.com
   keystonegamma.example.com
+
+Which can be run using:
+
   $ ansible-playbook -i inventory --sudo deploy.yaml
 
 Note that this will require the public ssh key from keystonealpha.example.com
