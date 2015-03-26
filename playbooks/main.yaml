@@ -1,0 +1,6 @@
+- hosts: all
+  - name: copy local keys to other nodes
+    - copy:
+      src=/etc/keystone/fernet-keys/
+      dest=/etc/keystone/fernet-keys/
+      directory_mode=yes
