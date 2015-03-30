@@ -32,7 +32,7 @@ inventory file::
 
 Which can be run using::
 
-  $ ansible-playbook -i inventory --sudo deploy.yaml
+  $ ansible-playbook -i inventory --sudo revolve.yaml
 
 Note that this will require the public ssh key from keystonealpha.example.com
 to be copied over to keystonebeta.example.com and keystonegamma.example.com.
